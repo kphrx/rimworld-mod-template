@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "kPherox",
+  "classifications": ["Mod"],
+  "identity": "dev.kpherox.RimWorldModTempalte",
+  "name": "RimWorld Mod Template",
+  "shortName": "rimworld",
+  "sourceName":"ModTemplate",
+  "symbols": {
+    "mod-author": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "AuthorName"
+    },
+    "description": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "ModDescription"
+    }
+  },
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            ".git/**",
+            ".gitignore",
+            "**/*.dll",
+            "README.md"
+          ]
+        }
+      ]
+    }
+  ]
+}
