@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+	<name>ModTemplate</name>
+	<author>AuthorName</author>
+	<packageId>AuthorName.ModTemplate</packageId>
+	<description>ModDescription</description>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+</ModMetaData>
