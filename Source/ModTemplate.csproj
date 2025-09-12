@@ -13,6 +13,9 @@
       <HintPath Condition="$([MSBuild]::IsOSPlatform('OSX'))">../../../Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <!--#if (UseHarmony) -->
+    <PackageReference Include="Lib.Harmony.Ref" Version="2.4.1" />
+    <!--#endif -->
   </ItemGroup>
 
   <PropertyGroup>

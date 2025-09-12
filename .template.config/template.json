@@ -16,6 +16,14 @@
       "type": "parameter",
       "datatype": "string",
       "replaces": "ModDescription"
+    },
+    "use-harmony": {
+      "type": "parameter",
+      "datatype": "bool"
+    },
+    "UseHarmony": {
+      "type": "computed",
+      "value": "(use-harmony)"
     }
   },
   "tags": {
