@@ -7,23 +7,19 @@
   "shortName": "rimworld",
   "sourceName":"ModTemplate",
   "symbols": {
-    "mod-author": {
+    "Author": {
       "type": "parameter",
       "datatype": "string",
       "replaces": "AuthorName"
     },
-    "description": {
+    "Description": {
       "type": "parameter",
       "datatype": "string",
       "replaces": "ModDescription"
     },
-    "use-harmony": {
+    "UseHarmony": {
       "type": "parameter",
       "datatype": "bool"
-    },
-    "UseHarmony": {
-      "type": "computed",
-      "value": "(use-harmony)"
     }
   },
   "tags": {

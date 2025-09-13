@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json.schemastore.org/dotnetcli.host",
+  "symbolInfo": {
+    "Author": {
+      "longName": "mod-author",
+      "shortName": "ma"
+    },
+    "Description": {
+      "longName": "description",
+      "shortName": "md"
+    },
+    "UseHarmony": {
+      "longName": "use-harmony",
+      "shortName": "uh"
+    }
+  }
+}
