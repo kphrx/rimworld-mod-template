@@ -2,6 +2,7 @@
 
 open RimWorld;
 open Verse;
+open Poet.Lib;
 #if (useHarmony)
 open HarmonyLib;
 #endif
@@ -10,7 +11,7 @@ open HarmonyLib;
 type StartupConstructor() =
   static do
 #if (useHarmony)
-    let harmony = Harmony("AuthorName.ModTemplate")
+    let harmony = Harmony "AuthorName.ModTemplate"
     do harmony.PatchAll()
 #endif
-    Log.Message("ModTemplate loaded successfully!")
+    log "ModTemplate loaded successfully!"

@@ -13,6 +13,12 @@
       <HintPath Condition="$([MSBuild]::IsOSPlatform('OSX'))">../../../Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Poet">
+      <HintPath Condition="$([MSBuild]::IsOSPlatform('Windows'))">../../../../../workshop/content/294100/2059725183/Assemblies/Poet.dll</HintPath>
+      <HintPath Condition="$([MSBuild]::IsOSPlatform('Linux'))">../../../../../workshop/content/294100/2059725183/Assemblies/Poet.dll</HintPath>
+      <HintPath Condition="$([MSBuild]::IsOSPlatform('OSX'))">../../../../../../workshop/content/294100/2059725183/Assemblies/Poet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <PackageReference Condition="'$(useHarmony)' == 'true'" Include="Lib.Harmony.Ref" Version="$(HarmonyVersion)" />
   </ItemGroup>
 
