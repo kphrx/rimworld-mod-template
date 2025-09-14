@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath Condition="$([MSBuild]::IsOSPlatform('Windows'))">../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
+      <HintPath Condition="$([MSBuild]::IsOSPlatform('Linux'))">../../../RimWorldLinux_Data/Managed/Assembly-CSharp.dll</HintPath>
+      <HintPath Condition="$([MSBuild]::IsOSPlatform('OSX'))">../../../Contents/Resources/Data/Managed/Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath Condition="$([MSBuild]::IsOSPlatform('Windows'))">../../../RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+      <HintPath Condition="$([MSBuild]::IsOSPlatform('Linux'))">../../../RimWorldLinux_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+      <HintPath Condition="$([MSBuild]::IsOSPlatform('OSX'))">../../../Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <PackageReference Condition="'$(useHarmony)' == 'true'" Include="Lib.Harmony.Ref" Version="$(HarmonyVersion)" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <DebugType>none</DebugType>
+    <GenerateDependencyFile>False</GenerateDependencyFile>
+    <OutputPath>../v$(GameVersion)/Assemblies/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+
+</Project>

@@ -2,10 +2,15 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "kPherox",
   "classifications": ["Mod"],
-  "identity": "dev.kpherox.RimWorldModTempalte",
+  "identity": "dev.kpherox.RimWorldModTempalte.CSharp",
+  "groupIdentity": "dev.kpherox.RimWorldModTempalte",
   "name": "RimWorld Mod Template",
   "shortName": "rimworld",
   "sourceName":"ModTemplate",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
   "symbols": {
     "Author": {
       "type": "parameter",
@@ -123,10 +128,6 @@
         ]
       }
     }
-  },
-  "tags": {
-    "language": "C#",
-    "type": "project"
   },
   "sources": [
     {

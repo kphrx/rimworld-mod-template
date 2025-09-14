@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ModMetaData>
+	<name>ModTemplate</name>
+	<author>AuthorName</author>
+	<packageId>AuthorName.ModTemplate</packageId>
+	<description>ModDescription</description>
+	<supportedVersions>
+		<li>$(GameVersion)</li>
+	</supportedVersions>
+	<modDependencies>
+		<!--#if (useHarmony) -->
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+		<!--#endif -->
+		<li>
+			<packageId>latta.fsharp.core</packageId>
+			<displayName>FSharp.Core</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2059725183</steamWorkshopUrl>
+			<downloadUrl>https://github.com/alattalatta/Monoworld/releases</downloadUrl>
+		</li>
+	</modDependencies>
+</ModMetaData>
