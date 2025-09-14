@@ -20,7 +20,16 @@ dotnet new install ./rimworld-mod-template
    dotnet build
    ```
 
-## Technical Details
-Based on `dotnet new classlib -f netstandard2.1`, added RimWorld's `Assembly-CSharp` and `UnityEngine` references.
+## Supported RimWorld Versions
+| RimWorld Version | Supported          | Unity Version | C# Version | .NET Version       |
+|------------------|--------------------|---------------|------------|--------------------|
+| 1.6              | :white_check_mark: | 2022.3.35f1   | 9.0        | .NET Standard 2.1  |
+| 1.5              | :white_check_mark: | 2019.4.30f1   | 7.3        | .NET Standard 2.0  |
+| 1.4              | :white_check_mark: | 2019.4.30f1   | 7.3        | .NET Standard 2.0  |
+| 1.3              | :white_check_mark: | 2019.4.30f1   | 7.3        | .NET Standard 2.0  |
+| 1.2              | :white_check_mark: | 2019.2.17f1   | 7.3        | .NET Standard 2.0  |
+| 1.1              | :white_check_mark: | 2019.2.17f1   | 7.3        | .NET Standard 2.0  |
+| 1.0              | :x:                | 5.6.5f1       | 4.0        | .NET Framework 3.5 |
 
-Currently version (v1.6) used Unity 2022.3.35. This version supports .NET Standard 2.1 and C# 9.0.
+## Technical Details
+Based on `dotnet new classlib -f netstandard2.1`, added RimWorld's `Assembly-CSharp` and `UnityEngine.CoreModule` references.
