@@ -13,17 +13,15 @@
       <HintPath Condition="$([MSBuild]::IsOSPlatform('OSX'))">../../../Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <!--#if (UseHarmony) -->
-    <PackageReference Include="Lib.Harmony.Ref" Version="2.4.1" />
-    <!--#endif -->
+    <PackageReference Condition="'$(UseHarmony)' == 'true'" Include="Lib.Harmony.Ref" Version="2.4.1" />
   </ItemGroup>
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable Condition="'$(langVersion)' != '7.3'">enable</Nullable>
     <DebugType>none</DebugType>
     <GenerateDependencyFile>False</GenerateDependencyFile>
-    <OutputPath>../Assemblies/</OutputPath>
+    <OutputPath>../v$(GameVersion)/Assemblies/</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 

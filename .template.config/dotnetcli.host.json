@@ -9,6 +9,10 @@
       "longName": "description",
       "shortName": "md"
     },
+    "GameVersion": {
+      "longName": "game-version",
+      "shortName": "gv"
+    },
     "UseHarmony": {
       "longName": "use-harmony",
       "shortName": "uh"

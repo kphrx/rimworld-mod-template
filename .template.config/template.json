@@ -17,9 +17,63 @@
       "datatype": "string",
       "replaces": "ModDescription"
     },
+    "GameVersion": {
+      "type": "parameter",
+      "datatype": "choice",
+      "replaces": "$(GameVersion)",
+      "fileRename": "1.6",
+      "defaultValue": "1.6",
+      "choices": [
+        { "choice": "1.1" },
+        { "choice": "1.2" },
+        { "choice": "1.3" },
+        { "choice": "1.4" },
+        { "choice": "1.5" },
+        { "choice": "1.6" }
+      ]
+    },
     "UseHarmony": {
       "type": "parameter",
       "datatype": "bool"
+    },
+    "unityVersion": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "datatype": "string",
+        "cases": [
+          {
+            "condition": "(GameVersion == '1.1' || GameVersion == '1.2')",
+            "value": "2019.2.17f1"
+          },
+          {
+            "condition": "(GameVersion == '1.3' || GameVersion == '1.4' || GameVersion == '1.5')",
+            "value": "2019.4.30f1"
+          },
+          {
+            "condition": "(GameVersion == '1.6')",
+            "value": "2022.3.35f1"
+          }
+        ]
+      }
+    },
+    "Framework": {
+      "type": "generated",
+      "generator": "switch",
+      "replaces": "netstandard2.1",
+      "parameters": {
+        "datatype": "string",
+        "cases": [
+          {
+            "condition": "(unityVersion == '2019.2.17f1' || unityVersion == '2019.4.30f1')",
+            "value": "netstandard2.0"
+          },
+          {
+            "condition": "(unityVersion == '2022.3.35f1')",
+            "value": "netstandard2.1"
+          }
+        ]
+      }
     }
   },
   "tags": {

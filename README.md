@@ -12,9 +12,9 @@ dotnet new install ./rimworld-mod-template
    cd /path/to/Mods
 
    # output to `<Mod Directory>/` and set mod name to <Mod Directory> or <Mod Name>
-   dotnet new rimworld --output <Mod Directory> [--name <Mod Name>] [--mod-author <Mod Author>] [--description <Mod Description>]
+   dotnet new rimworld --output <Mod Directory> [--name <Mod Name>] [--mod-author <Mod Author>] [--description <Mod Description>] [--game-version <Game Version>]
    ```
-2. First build, generate `Assemblies/<mod name>.dll`
+2. First build, generate `v<Game Version>/Assemblies/<mod name>.dll`
    ```sh
    cd <Mod Directory>
    dotnet build
