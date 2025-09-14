@@ -1,6 +1,6 @@
 ﻿using RimWorld;
 using Verse;
-#if (UseHarmony)
+#if (useHarmony)
 using HarmonyLib;
 #endif
 
@@ -11,7 +11,7 @@ namespace ModTemplate
     {
         static ModTemplate()
         {
-#if (UseHarmony)
+#if (useHarmony)
             var harmony = new Harmony("AuthorName.ModTemplate");
             harmony.PatchAll();
 #endif
