@@ -24,4 +24,8 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="Mod.fs" />
+  </ItemGroup>
+
 </Project>
